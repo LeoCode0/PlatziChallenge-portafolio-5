@@ -2,6 +2,7 @@
   box-sizing: border-box;
   border: 0;
   margin: 0;
+  padding: 0;
 }
 
 html{
@@ -43,4 +44,36 @@ main{
   width: 50%;
   min-width: 600px;
   margin: 0 auto;
+}
+
+#grid{
+  margin: 20px 0;
+}
+
+.grid-row{
+  display: flex;
+  padding: 5px;
+}
+
+.row-item{
+  border: 1px solid gray;
+  width: 45px;
+  height: 45px;
+  margin: 0 10px;
+}
+
+.gray{
+  background-color: gray;
+}
+
+.green{
+  background-color: green;
+}
+
+.marron{
+  background-color: brown;
+}
+
+.button-reset{
+  margin-top: 20px;
 }
