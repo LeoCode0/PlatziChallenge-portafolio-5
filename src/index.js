@@ -8,7 +8,7 @@ const keyboardLetters = [
 
 const listElements = [];
 let myAnswer = [];
-const secretWord = ["p", "l", "a", "t", "z", "i"];
+let secretWord = ["p", "l", "a", "t", "z", "i"];
 
 let positions = [];
 let attempts = 0;
@@ -27,6 +27,16 @@ for (let row = 0; row < 5; row++) {
 }
 
 grid.append(...rows);
+
+const fetchWord = () => {
+  fetch("https://random-word-api.herokuapp.com/word?length=6")
+    .then((response) => response.json())
+    .then((data) => {
+      secretWord = data[0].split("");
+    });
+};
+
+fetchWord();
 
 keyboardLetters.map((letters) => {
   const list = document.createElement("ul");
